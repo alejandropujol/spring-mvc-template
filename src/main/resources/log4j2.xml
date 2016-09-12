@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+	<Appenders>
+		<File name="FILE" fileName="spring-mvc-template.log" bufferedIO="false">
+			<PatternLayout pattern="%d %-5p [%t] (%F:%L) :: %m%n" />
+		</File>
+	</Appenders>
+	<Loggers>
+		<Root level="debug">
+			<AppenderRef ref="FILE" />
+		</Root>
+	</Loggers>
+</Configuration>
