@@ -9,6 +9,15 @@
 	<version>0.0.1</version>
 	<packaging>war</packaging>
 	
+	<properties>
+		<fasterxml.version>2.8.2</fasterxml.version>
+        <java.version>1.8</java.version>
+        <junit.version>4.12</junit.version>
+        <log4j.version>2.6.2</log4j.version>
+        <slf4j.version>1.7.21</slf4j.version>
+        <spring.version>4.3.2.RELEASE</spring.version>
+    </properties>
+	
     <dependencies>
     	<!-- COMPILE SCOPE -->
         <dependency>
@@ -33,9 +42,8 @@
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-parent</artifactId>
+			<artifactId>slf4j-api</artifactId>
 			<version>${slf4j.version}</version>
-			<type>pom</type>
 		</dependency>
         <dependency>
             <groupId>org.springframework</groupId>
@@ -47,7 +55,14 @@
             <artifactId>spring-webmvc</artifactId>
             <version>${spring.version}</version>
         </dependency>
-        <!-- TEST SCOPE -->
+        <!-- PROVIDED -->
+		<dependency>
+		    <groupId>javax.servlet</groupId>
+		    <artifactId>javax.servlet-api</artifactId>
+		    <version>3.1.0</version>
+		    <scope>provided</scope>
+		</dependency>
+        <!-- TEST -->
         <dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -70,13 +85,5 @@
             </plugin>
         </plugins>
     </build>
-    
-	<properties>
-		<fasterxml.version>2.8.2</fasterxml.version>
-        <java.version>1.8</java.version>
-        <junit.version>4.12</junit.version>
-        <log4j.version>2.6.2</log4j.version>
-        <slf4j.version>1.7.21</slf4j.version>
-        <spring.version>4.3.2.RELEASE</spring.version>
-    </properties>
+
 </project>

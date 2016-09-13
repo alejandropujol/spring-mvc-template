@@ -2,12 +2,12 @@
 <Configuration>
 	<Appenders>
 		<Console name="STDOUT" target="SYSTEM_OUT">
-			<PatternLayout pattern="%d %-5p [%t] (%F:%L) :: %m%n" />
+			<PatternLayout pattern="%d %-5level %logger - %msg%n" />
 		</Console>
 	</Appenders>
 	<Loggers>
-		<Root level="debug">
-			<AppenderRef ref="STDOUT" />
+		<Root level="TRACE">
+			<AppenderRef ref="STDOUT" level="DEBUG" />
 		</Root>
 	</Loggers>
 </Configuration>

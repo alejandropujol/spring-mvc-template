@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration>
 	<Appenders>
-		<File name="FILE" fileName="spring-mvc-template.log" bufferedIO="false">
-			<PatternLayout pattern="%d %-5p [%t] (%F:%L) :: %m%n" />
+		<File name="FILE" fileName="${sys:catalina.home}/logs/spring-mvc-template.log" immediateFlush="true" append="true">
+			<PatternLayout pattern="%d %-5level %logger - %msg%n" />
 		</File>
 	</Appenders>
 	<Loggers>
-		<Root level="debug">
-			<AppenderRef ref="FILE" />
+		<Root level="TRACE">
+			<AppenderRef ref="FILE" level="DEBUG" />
 		</Root>
 	</Loggers>
 </Configuration>
